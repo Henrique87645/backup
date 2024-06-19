@@ -1,36 +1,37 @@
 
 // funções de movimentação do robô que recebem "V" que vai ser velocidade
+
 //MOTORES DE CURVA 90
 void moverDireita90(unsigned char V)
 {
-  motor3.setSpeed(V+70);
+  motor3.setSpeed(V);
   motor3.run(FORWARD);
-  motor4.setSpeed(V-70);
+  motor4.setSpeed(V);
   motor4.run(FORWARD);
 } 
 
 void moverEsquerda90(unsigned char V)
 {
-  motor3.setSpeed(V-70);
+  motor3.setSpeed(V);
   motor3.run(BACKWARD);
-  motor4.setSpeed(V+70);
+  motor4.setSpeed(V);
   motor4.run(BACKWARD);
 } // FIM MOTOR CURVA 90
 
 //COMEÇO CURVAS IR
 void moverDireita(unsigned char V)
 {
-  motor3.setSpeed(V);
+  motor3.setSpeed(V+c);
   motor3.run(FORWARD);
-  motor4.setSpeed(V-20);
+  motor4.setSpeed(V-c);
   motor4.run(BACKWARD);
 } 
 
 void moverEsquerda(unsigned char V)
 {
-  motor3.setSpeed(V-20);
+  motor3.setSpeed(V-c);
   motor3.run(FORWARD);
-  motor4.setSpeed(V);
+  motor4.setSpeed(V+c);
   motor4.run(BACKWARD);
 } // FIM CURVA IR 
 
